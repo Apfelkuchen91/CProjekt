@@ -35,6 +35,14 @@
  * }
  * \enddot
  * Strucktur des Projektes
+ *
+ * \dot
+ * digraph Strucktur {
+ * Konsole -> Spielbrett -> Stein
+ * }
+ * \enddot
+ * Strucktur des Projektes
+ *
  */
 
 /*!
