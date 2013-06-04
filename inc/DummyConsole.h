@@ -16,6 +16,10 @@ class DummyConsole : public Console
 	public:
 		DummyConsole();
 		virtual ~DummyConsole();
+
+		virtual void draw(
+			unsigned short _x , unsigned short _y , char _symbol );
+		virtual void clear();
 };
 
 #endif /* DUMMYCONSOLE_H_ */
