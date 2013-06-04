@@ -1,33 +1,22 @@
 /*
- * @file	Console.h
+ * @file	Interface.h
  *
  * @date	21.05.2013
  * @author	Superuser
- * @brief	Console.h
+ * @brief	Interface.h
  */
 
-#ifndef CONSOLE_H_
-#define CONSOLE_H_
+#ifndef INTERFACE_H_
+#define INTERFACE_H_
 
-#include "Interface.h"
-
-class Console : public Interface
+class Console
 {
-	private:
-		HANDLE hCon;
+public:
+	Console();
+	virtual ~Console();
 
-		HANDLE getHCon() const
-		{
-			return hCon;
-		}
-
-	public:
-		Console();
-		virtual ~Console();
-
-		int oberflaeche();
-		int anleitung();
-		void set_console( short breite , short hoehe );
+	virtual void draw(unsigned short _x, unsigned short _y, char _symbol) = 0;
+	virtual void clear() = 0;
 };
 
-#endif /* CONSOLE_H_ */
+#endif /* INTERFACE_H_ */

@@ -59,7 +59,7 @@
 using namespace std;
 
 #include "Tile.h"
-#include "Console.h"
+#include "WindowsConsole.h"
 #include <stdio.h>
 
 // Durch das Entkommentieren der folgenden Flags lassen sich einige Debug-Meldungen aktivieren:
@@ -87,7 +87,7 @@ int main( int argc , char **argv )
 #endif
 
 	// Initialisieren der Benutzeroberfläche (in Form einer Textkonsole)
-	Console* console = new Console( );
+	WindowsConsole* console = new WindowsConsole( );
 
 	// Benutzeroberfläche anzeigen
 	console->oberflaeche( );
