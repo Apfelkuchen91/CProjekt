@@ -14,6 +14,11 @@ class TileTest
 	public:
 		TileTest();
 		virtual ~TileTest();
+
+		/*!
+		 * Zeichnet den Baustein
+		 */
+		virtual void printTile();
 };
 
 #endif /* TILETEST_H_ */

@@ -110,13 +110,24 @@ class Tile
 		 */
 		virtual Block *getPBlock(
 			unsigned short _width , unsigned short _height );
+
 		/*!
 		 * Gibt einen Block zur&uuml;ck.
 		 * @return Block.
 		 */
 		virtual Block getBlock(
 			unsigned short _width , unsigned short _height );
-		virtual void rotate(void);
+
+		/*!
+		 * Gibt den Baustein
+		 */
+		virtual void rotate();
+
+		/*!
+		 * Zeichnet den Baustein
+		 */
+		virtual void printTile();
+
 };
 
 #endif /* TILE_H_ */

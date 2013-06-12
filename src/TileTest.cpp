@@ -6,7 +6,10 @@
  * @brief	TileTest.cpp
  */
 
+#include <iostream>
 #include "TileTest.h"
+
+using namespace std;
 
 TileTest::TileTest()
 {
@@ -19,3 +22,11 @@ TileTest::~TileTest()
 	// TODO Auto-generated destructor stub
 }
 
+
+void TileTest::printTile()
+{
+	cout << "*" << endl;
+	cout << "*" << endl;
+	cout << "*" << endl;
+	cout << "**" << endl;
+}
