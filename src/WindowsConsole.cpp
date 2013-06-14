@@ -115,6 +115,7 @@ int WindowsConsole::anleitung()
 	return 0;
 }
 
+
 void WindowsConsole::set_console( short breite , short hoehe )
 {
 	HANDLE hCon = GetStdHandle( STD_OUTPUT_HANDLE );
@@ -131,3 +132,4 @@ void WindowsConsole::set_console( short breite , short hoehe )
 	SetConsoleWindowInfo( hCon , true , & size );
 	SetConsoleScreenBufferSize( hCon , b_size );
 }
+
