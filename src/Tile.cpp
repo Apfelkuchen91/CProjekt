@@ -5,8 +5,13 @@
  * @author	Superuser
  * @brief	Sourcedatei f&uuml;r Spielsteine
  */
-
+#include <stdlib.h>
 #include "Tile.h"
+#include "TileI.h"
+#include "TileL.h"
+#include "TileO.h"
+#include "TileS.h"
+#include "TileT.h"
 
 using namespace std;
 //!< Einfacher Zugriff auf Funktionen der Standardbibliothek.
@@ -109,4 +114,34 @@ void Tile::rotate()
 void Tile::printTile()
 {
 
+}
+
+
+Tile * getNewTile()
+{
+	Tile * pTile = NULL;
+	unsigned short zid = 0;
+
+	zid = (rand() % 5) + 1; // Zahlen von 1 bis 5
+
+	switch(zid)
+	{
+		case(1):
+				pTile = new TileI();
+				break;
+		case(2):
+				pTile = new TileL();
+				break;
+		case(3):
+				pTile = new TileO();
+				break;
+		case(4):
+				pTile = new TileS();
+				break;
+		case(5):
+				pTile = new TileT();
+				break;
+	}
+
+	return pTile;
 }

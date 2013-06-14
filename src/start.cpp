@@ -54,14 +54,16 @@
  *
  */
 
-#include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
 #include "Tile.h"
 #include "Console.h"
 #include "DummyConsole.h"
-#include <stdio.h>
+
+void init();
 
 /*!
  * @brief	Einstiegspunkt f&uuml;r das gesammte Projekt.
@@ -84,3 +86,8 @@ int main( int argc , char **argv )
 	return 0;
 }
 
+
+void init()
+{
+	 srand(time(0));  //! Initialize random number generator.
+}

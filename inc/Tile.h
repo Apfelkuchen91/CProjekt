@@ -130,4 +130,12 @@ class Tile
 
 };
 
+
+
+/*!
+ * Erstellt einenzuf&auml;lligen Spielstein
+ * @return Pointer auf den neuen Spielstein.
+ */
+Tile * getNewTile();
+
 #endif /* TILE_H_ */
