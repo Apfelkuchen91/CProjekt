@@ -74,6 +74,8 @@ void init();
  */
 int main( int argc , char **argv )
 {
+	init();
+
 	// Initialisieren der Benutzeroberfläche (in Form einer Textkonsole)
 	Console* console = new DummyConsole( );
 
