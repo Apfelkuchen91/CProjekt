@@ -6,16 +6,25 @@
  * @brief	Block.cpp
  */
 
+#include <iostream>
+
 #include "Block.h"
 
-Block::Block()
+using namespace std;
+
+Block::Block() :
+			symbol( '*' )
 {
-	// TODO Auto-generated constructor stub
+
 
 }
 
 Block::~Block()
 {
-	// TODO Auto-generated destructor stub
+}
+
+void Block::printSymbol()
+{
+	cout << symbol;
 }
 

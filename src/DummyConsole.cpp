@@ -11,6 +11,7 @@
 #include "DummyConsole.h"
 #include "Tile.h"
 #include "TileTest.h"
+#include "Gameboard.h"
 
 using namespace std;
 
@@ -26,13 +27,19 @@ DummyConsole::~DummyConsole()
 void DummyConsole::draw(
 	unsigned short _x , unsigned short int _y , char _symbol )
 {
-	TileTest *pTile = new TileTest( );
+	/*TileTest *pTile = new TileTest( );
 
 	pTile->printTile( );
 
-	delete ( pTile );
+	delete ( pTile );*/
 
-	system( "PAUSE" );
+	Gameboard * pGameboard = new Gameboard(15, 15);
+
+	pGameboard->print();
+
+	delete pGameboard;
+
+	//system( "PAUSE" );
 }
 
 void DummyConsole::clear()
