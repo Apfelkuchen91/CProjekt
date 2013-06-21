@@ -12,6 +12,7 @@
 #include "Tile.h"
 #include "TileTest.h"
 #include "Gameboard.h"
+#include "Dimension.h"
 
 using namespace std;
 
@@ -33,7 +34,7 @@ void DummyConsole::draw(
 
 	delete ( pTile );*/
 
-	Gameboard * pGameboard = new Gameboard(15, 15);
+	Gameboard * pGameboard = new Gameboard(Dimension(15, 15));
 
 	pGameboard->print();
 

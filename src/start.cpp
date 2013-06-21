@@ -54,12 +54,8 @@
  *
  */
 
-#include <ctime>
-#include <cstdlib>
-
 #include "CProjekt.h"
 
-void init();
 
 /*!
  * @brief	Einstiegspunkt f&uuml;r das gesammte Projekt.
@@ -70,15 +66,9 @@ void init();
  */
 int main( int argc , char **argv )
 {
-	init();
-
-	CProjekt(); // Eingang in das Objektorierntierte
+	CProjekt().run(); // Eingang in das Objektorierntierte
 
 	return 0;
 }
 
 
-void init()
-{
-	 srand(time(0));  //! Initialize random number generator.
-}

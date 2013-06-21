@@ -10,6 +10,7 @@
 #define GAMEBOARD_H_
 
 #include "Block.h"
+#include "Dimension.h"
 
 /*!
  * \brief Grundklasse f&uuml;r das Spielfeld
@@ -17,8 +18,7 @@
 class Gameboard
 {
 	private:
-		const unsigned short height;	//!< H&ouml;he des Spielfeldes
-		const unsigned short weight;	//!< Breite des Spielfeldes
+		Dimension dimension;
 		Block * gamebordBlock;			//!< Array für die Bl&ouml;cke auf dem Spielfeld
 
 		Block * createGamebord();
@@ -31,7 +31,7 @@ class Gameboard
 		 * @param _height	H&ouml;he des Spielsteines
 		 * @param _weight	Breite des Spielsteines
 		 */
-		Gameboard(const unsigned short _height, const unsigned short _weight);
+		Gameboard(Dimension _dimension);
 		/*!
 		 * Destuktor
 		 */

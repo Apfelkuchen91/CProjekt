@@ -9,16 +9,14 @@
 #include <iostream>
 #include <cstdlib>
 #include "Gameboard.h"
+#include "PositionIterator.h"
 
 using namespace std;
 
-Gameboard::Gameboard(
-	const unsigned short _height , const unsigned short _weight ) :
-			height( _height ),
-			weight( _weight ),
+Gameboard::Gameboard(Dimension _dimension) :
+			dimension(_dimension),
 			gamebordBlock(createGamebord())
 {
-	// TODO Auto-generated constructor stub
 
 }
 
@@ -29,13 +27,13 @@ Gameboard::~Gameboard()
 
 Block * Gameboard::createGamebord()
 {
-	Block * retval = new Block[height * weight];
+	Block * retval = new Block[dimension.getSize()];
 
-	for(unsigned short i = 0; i < height; i++)
+	for(unsigned short i = 0; i < dimension.getHeight(); i++)
 	{
-		for(unsigned short j = 0; j < weight; j++)
+		for(unsigned short j = 0; j < dimension.getWidth(); j++)
 		{
-			retval[i * weight + j].setSymbol('x');
+			retval[i * dimension.getWidth() + j].setSymbol('x');
 		}
 	}
 
@@ -52,13 +50,21 @@ void Gameboard::deleateGameboard()
 
 void Gameboard::print()
 {
-	for(unsigned short i = 0; i < height; i++)
-		{
-			for(unsigned short j = 0; j < weight; j++)
-			{
-				gamebordBlock[i * weight + j].printSymbol();
-			}
-
+	for(DimensionPositionIterator positions = dimension.getIterator(); positions.hasNext(); )
+	{
+		Position position = positions.getNext();
+		gamebordBlock[position.getY() * dimension.getWidth() + position.getX()].printSymbol();
+		if(position.getX() + 1 == dimension.getWidth())
 			cout << endl;
-		}
+	}
+
+//	for(unsigned short i = 0; i < dimension.getHeight(); i++)
+//		{
+//			for(unsigned short j = 0; j < dimension.getWidth(); j++)
+//			{
+//				gamebordBlock[i * dimension.getWidth() + j].printSymbol();
+//			}
+//
+//			cout << endl;
+//		}
 }
