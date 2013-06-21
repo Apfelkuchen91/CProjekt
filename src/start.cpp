@@ -56,12 +56,8 @@
 
 #include <ctime>
 #include <cstdlib>
-#include <iostream>
-using namespace std;
 
-#include "Tile.h"
-#include "Console.h"
-#include "DummyConsole.h"
+#include "CProjekt.h"
 
 void init();
 
@@ -76,14 +72,7 @@ int main( int argc , char **argv )
 {
 	init();
 
-	// Initialisieren der Benutzeroberfläche (in Form einer Textkonsole)
-	Console* console = new DummyConsole( );
-
-	// Benutzeroberfläche anzeigen
-	console->draw( 2 , 4 , 'x' );
-
-	// Aufräumcode:
-	delete console;
+	CProjekt(); // Eingang in das Objektorierntierte
 
 	return 0;
 }
