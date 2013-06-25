@@ -133,3 +133,15 @@ void WindowsConsole::set_console( short breite , short hoehe )
 	SetConsoleScreenBufferSize( hCon , b_size );
 }
 
+void WindowsConsole::print_tile(short x, short y)
+{
+	set_cursor(x, y);
+	cout << "X";
+}
+
+
+void WindowsConsole::set_cursor(short x, short y)
+{
+	COORD C = {x , y};
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),C);
+}
