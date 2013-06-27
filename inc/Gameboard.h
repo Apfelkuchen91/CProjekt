@@ -28,8 +28,7 @@ class Gameboard
 	public:
 		/*!
 		 * Konstruktr
-		 * @param _height	H&ouml;he des Spielsteines
-		 * @param _weight	Breite des Spielsteines
+		 * @param _dimension	Dimension des Spielsteines
 		 */
 		Gameboard(Dimension _dimension);
 		/*!
