@@ -17,13 +17,3 @@ PositionIterator::~PositionIterator()
 {
 	// TODO Auto-generated destructor stub
 }
-
-bool PositionIterator::hasNext()
-{
-	return false;
-}
-
-Position PositionIterator::getNext()
-{
-	return Position( 0 , 0 );
-}
