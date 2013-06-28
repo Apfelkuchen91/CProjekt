@@ -50,9 +50,10 @@ void Gameboard::deleateGameboard()
 
 void Gameboard::print()
 {
-	for(DimensionPositionIterator positions = dimension.getIterator(); positions.hasNext(); )
+	for (std::shared_ptr<DimensionPositionIterator> positions =
+			dimension.getIterator(); positions->hasNext();)
 	{
-		Position position = positions.getNext();
+		Position position = positions->getNext();
 		gamebordBlock[position.getY() * dimension.getWidth() + position.getX()].printSymbol();
 		if(position.getX() + 1 == dimension.getWidth())
 			cout << endl;

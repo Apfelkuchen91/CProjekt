@@ -8,7 +8,9 @@
 #ifndef DIMENSION_H_
 #define DIMENSION_H_
 
-#include "DimensionPositionIterator.h"
+#include <memory>
+
+class DimensionPositionIterator;
 
 class Dimension {
 private:
@@ -18,9 +20,7 @@ public:
 	Dimension(unsigned short _height, unsigned short _weight);
 	virtual ~Dimension();
 
-	DimensionPositionIterator getIterator() const{
-		return DimensionPositionIterator(*this);
-	}
+	std::shared_ptr<DimensionPositionIterator> getIterator() const;
 
 	const unsigned short getHeight() const {
 		return height;
@@ -34,5 +34,7 @@ public:
 			return height * width;
 	}
 };
+
+#include "DimensionPositionIterator.h"
 
 #endif /* DIMENSION_H_ */
