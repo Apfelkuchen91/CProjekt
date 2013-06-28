@@ -22,7 +22,8 @@ Gameboard::Gameboard( Dimension _dimension ) :
 
 Gameboard::~Gameboard()
 {
-	deleateGameboard( );
+	delete[] gamebordBlock;
+	gamebordBlock = NULL;
 }
 
 Block * Gameboard::createGamebord()
@@ -38,12 +39,6 @@ Block * Gameboard::createGamebord()
 	}
 
 	return retval;
-}
-
-void Gameboard::deleateGameboard()
-{
-	delete[] gamebordBlock;
-	gamebordBlock = NULL;
 }
 
 void Gameboard::print()

@@ -22,7 +22,6 @@ class Gameboard
 		Block * gamebordBlock;	//!< Array f�r die Bl&ouml;cke auf dem Spielfeld
 
 		Block * createGamebord();
-		void deleateGameboard();
 
 	public:
 		/*!
