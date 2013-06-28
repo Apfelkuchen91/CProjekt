@@ -43,10 +43,10 @@ Block * Gameboard::createGameboard()
 
 void Gameboard::print()
 {
-	for ( std::shared_ptr < DimensionPositionIterator > positions =
-			dimension.getIterator( ) ; positions->hasNext( ) ; )
+	for ( auto positionIterator = dimension.getIterator( ) ;
+			positionIterator->hasNext( ) ; )
 	{
-		Position position = positions->getNext( );
+		Position position = positionIterator->getNext( );
 		gameboardBlock[position.getY( ) * dimension.getWidth( )
 				+ position.getX( )].printSymbol( );
 		if ( position.getX( ) + 1 == dimension.getWidth( ) )
