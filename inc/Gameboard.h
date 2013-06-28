@@ -19,9 +19,9 @@ class Gameboard
 {
 	private:
 		Dimension dimension;
-		Block * gamebordBlock;	//!< Array f�r die Bl&ouml;cke auf dem Spielfeld
+		Block * gameboardBlock;	//!< Array f�r die Bl&ouml;cke auf dem Spielfeld
 
-		Block * createGamebord();
+		Block * createGameboard();
 
 	public:
 		/*!

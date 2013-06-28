@@ -15,18 +15,18 @@ using namespace std;
 
 Gameboard::Gameboard( Dimension _dimension ) :
 			dimension( _dimension ),
-			gamebordBlock( createGamebord( ) )
+			gameboardBlock( createGameboard( ) )
 {
 
 }
 
 Gameboard::~Gameboard()
 {
-	delete[] gamebordBlock;
-	gamebordBlock = NULL;
+	delete[] gameboardBlock;
+	gameboardBlock = NULL;
 }
 
-Block * Gameboard::createGamebord()
+Block * Gameboard::createGameboard()
 {
 	Block * retval = new Block[dimension.getSize( )];
 
@@ -47,7 +47,7 @@ void Gameboard::print()
 			dimension.getIterator( ) ; positions->hasNext( ) ; )
 	{
 		Position position = positions->getNext( );
-		gamebordBlock[position.getY( ) * dimension.getWidth( )
+		gameboardBlock[position.getY( ) * dimension.getWidth( )
 				+ position.getX( )].printSymbol( );
 		if ( position.getX( ) + 1 == dimension.getWidth( ) )
 			cout << endl;
@@ -57,7 +57,7 @@ void Gameboard::print()
 //		{
 //			for(unsigned short j = 0; j < dimension.getWidth(); j++)
 //			{
-//				gamebordBlock[i * dimension.getWidth() + j].printSymbol();
+//				gameboardBlock[i * dimension.getWidth() + j].printSymbol();
 //			}
 //
 //			cout << endl;
