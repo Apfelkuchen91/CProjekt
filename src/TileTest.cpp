@@ -22,7 +22,6 @@ TileTest::~TileTest()
 	// TODO Auto-generated destructor stub
 }
 
-
 void TileTest::printTile()
 {
 	cout << "*" << endl;

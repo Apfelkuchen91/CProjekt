@@ -14,14 +14,14 @@
 class CProjekt
 {
 	private:
-	Console * console;
+		Console * console;
 
-	void init();
+		void init();
 
 	public:
 		CProjekt();
 		virtual ~CProjekt();
-	void run();
+		void run();
 };
 
 #endif /* CPROJEKT_H_ */

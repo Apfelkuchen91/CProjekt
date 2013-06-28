@@ -30,13 +30,13 @@ void DummyConsole::draw(
 {
 	/*TileTest *pTile = new TileTest( );
 
-	pTile->printTile( );
+	 pTile->printTile( );
 
-	delete ( pTile );*/
+	 delete ( pTile );*/
 
-	Gameboard * pGameboard = new Gameboard(Dimension(15, 15));
+	Gameboard * pGameboard = new Gameboard( Dimension( 15 , 15 ) );
 
-	pGameboard->print();
+	pGameboard->print( );
 
 	delete pGameboard;
 

@@ -13,33 +13,32 @@
 
 using namespace std;
 
-Gameboard::Gameboard(Dimension _dimension) :
-			dimension(_dimension),
-			gamebordBlock(createGamebord())
+Gameboard::Gameboard( Dimension _dimension ) :
+			dimension( _dimension ),
+			gamebordBlock( createGamebord( ) )
 {
 
 }
 
 Gameboard::~Gameboard()
 {
-	deleateGameboard();
+	deleateGameboard( );
 }
 
 Block * Gameboard::createGamebord()
 {
-	Block * retval = new Block[dimension.getSize()];
+	Block * retval = new Block[dimension.getSize( )];
 
-	for(unsigned short i = 0; i < dimension.getHeight(); i++)
+	for ( unsigned short i = 0 ; i < dimension.getHeight( ) ; i++ )
 	{
-		for(unsigned short j = 0; j < dimension.getWidth(); j++)
+		for ( unsigned short j = 0 ; j < dimension.getWidth( ) ; j++ )
 		{
-			retval[i * dimension.getWidth() + j].setSymbol('x');
+			retval[i * dimension.getWidth( ) + j].setSymbol( 'x' );
 		}
 	}
 
 	return retval;
 }
-
 
 void Gameboard::deleateGameboard()
 {
@@ -47,15 +46,15 @@ void Gameboard::deleateGameboard()
 	gamebordBlock = NULL;
 }
 
-
 void Gameboard::print()
 {
-	for (std::shared_ptr<DimensionPositionIterator> positions =
-			dimension.getIterator(); positions->hasNext();)
+	for ( std::shared_ptr < DimensionPositionIterator > positions =
+			dimension.getIterator( ) ; positions->hasNext( ) ; )
 	{
-		Position position = positions->getNext();
-		gamebordBlock[position.getY() * dimension.getWidth() + position.getX()].printSymbol();
-		if(position.getX() + 1 == dimension.getWidth())
+		Position position = positions->getNext( );
+		gamebordBlock[position.getY( ) * dimension.getWidth( )
+				+ position.getX( )].printSymbol( );
+		if ( position.getX( ) + 1 == dimension.getWidth( ) )
 			cout << endl;
 	}
 

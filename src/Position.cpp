@@ -7,13 +7,15 @@
 
 #include "Position.h"
 
-Position::Position(unsigned short _x, unsigned short _y):
-x(_x), y (_y){
-
+Position::Position( unsigned short _x , unsigned short _y ) :
+			x( _x ),
+			y( _y )
+{
 
 }
 
-Position::~Position() {
+Position::~Position()
+{
 
 }
 

@@ -19,18 +19,17 @@ class Gameboard
 {
 	private:
 		Dimension dimension;
-		Block * gamebordBlock;			//!< Array für die Bl&ouml;cke auf dem Spielfeld
+		Block * gamebordBlock;	//!< Array fï¿½r die Bl&ouml;cke auf dem Spielfeld
 
 		Block * createGamebord();
 		void deleateGameboard();
-
 
 	public:
 		/*!
 		 * Konstruktr
 		 * @param _dimension	Dimension des Spielsteines
 		 */
-		Gameboard(Dimension _dimension);
+		Gameboard( Dimension _dimension );
 		/*!
 		 * Destuktor
 		 */

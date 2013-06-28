@@ -23,7 +23,7 @@ class Block
 			return symbol;
 		}
 
-		void setSymbol(const char _symbol) const
+		void setSymbol( const char _symbol ) const
 		{
 			//symbol = _symbol;
 		}

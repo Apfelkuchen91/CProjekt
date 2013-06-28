@@ -130,8 +130,6 @@ class Tile
 
 };
 
-
-
 /*!
  * Erstellt einenzuf&auml;lligen Spielstein
  * @return Pointer auf den neuen Spielstein.

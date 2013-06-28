@@ -16,21 +16,23 @@ using namespace std;
 #include "CProjekt.h"
 
 CProjekt::CProjekt() :
-		console(new DummyConsole())
+			console( new DummyConsole( ) )
 {
-	init();
+	init( );
 }
 
-CProjekt::~CProjekt() {
+CProjekt::~CProjekt()
+{
 	delete console;
 }
 
 void CProjekt::init()
 {
-	srand(time(NULL));  //! Initialize random number generator.
+	srand( time( NULL ) );  //! Initialize random number generator.
 }
 
-void CProjekt::run() {
-	// Benutzeroberfläche anzeigen
-	console->draw(2, 4, 'x');
+void CProjekt::run()
+{
+	// Benutzeroberflï¿½che anzeigen
+	console->draw( 2 , 4 , 'x' );
 }

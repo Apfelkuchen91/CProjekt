@@ -65,7 +65,7 @@ Tile::Tile(
 Tile::~Tile()
 {
 	listBlock.erase( listBlock.begin( ) , listBlock.end( ) );//!< Alle Elemente aus der Liste l&ouml;schen.
-	delete[] blockArray; // TODO: Muss hier vorher jeder einzelne Block gelöscht werden?
+	delete[] blockArray; // TODO: Muss hier vorher jeder einzelne Block gelï¿½scht werden?
 }
 
 Block *Tile::getPBlock( unsigned short _width , unsigned short _height )
@@ -105,7 +105,7 @@ void Tile::rotate()
 					+ ( height - y - 1 )]; //<3 2D Arrays.
 		}
 	}
-	//die Matrix sollte nicht ausgerichtet werden müssen, vorrausgesetzt width und height der alten Matrix waren minimal gesetzt, und
+	//die Matrix sollte nicht ausgerichtet werden mï¿½ssen, vorrausgesetzt width und height der alten Matrix waren minimal gesetzt, und
 	// der Inhalt war bereits ausgerichtet
 
 	return;
@@ -116,31 +116,30 @@ void Tile::printTile()
 
 }
 
-
 Tile * getNewTile()
 {
 	Tile * pTile = NULL;
 	unsigned short zid = 0;
 
-	zid = (rand() % 5) + 1; // Zahlen von 1 bis 5
+	zid = ( rand( ) % 5 ) + 1; // Zahlen von 1 bis 5
 
-	switch(zid)
+	switch ( zid )
 	{
-		case(1):
-				pTile = new TileI();
-				break;
-		case(2):
-				pTile = new TileL();
-				break;
-		case(3):
-				pTile = new TileO();
-				break;
-		case(4):
-				pTile = new TileS();
-				break;
-		case(5):
-				pTile = new TileT();
-				break;
+		case ( 1 ):
+			pTile = new TileI( );
+			break;
+		case ( 2 ):
+			pTile = new TileL( );
+			break;
+		case ( 3 ):
+			pTile = new TileO( );
+			break;
+		case ( 4 ):
+			pTile = new TileS( );
+			break;
+		case ( 5 ):
+			pTile = new TileT( );
+			break;
 	}
 
 	return pTile;

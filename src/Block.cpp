@@ -16,7 +16,6 @@ Block::Block() :
 			symbol( '*' )
 {
 
-
 }
 
 Block::~Block()

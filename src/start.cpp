@@ -56,7 +56,6 @@
 
 #include "CProjekt.h"
 
-
 /*!
  * @brief	Einstiegspunkt f&uuml;r das gesammte Projekt.
  * Hier werden die erste Schritte ausgef&uuml;rt und erlebt somit das Projekt zum leben.
@@ -66,9 +65,8 @@
  */
 int main( int argc , char **argv )
 {
-	CProjekt().run(); // Eingang in das Objektorierntierte
+	CProjekt( ).run( ); // Eingang in das Objektorierntierte
 
 	return 0;
 }
-
 

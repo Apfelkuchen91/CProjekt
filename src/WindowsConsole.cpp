@@ -12,8 +12,8 @@
 
 using namespace std;
 
-WindowsConsole::WindowsConsole():
-		Console()
+WindowsConsole::WindowsConsole() :
+			Console( )
 {
 	// TODO Auto-generated constructor stub
 
@@ -57,7 +57,7 @@ int WindowsConsole::oberflaeche()
 
 int WindowsConsole::anleitung()
 {
-	cout << endl << "== Verfügbare Spielsteine ==" << endl << endl;
+	cout << endl << "== Verfï¿½gbare Spielsteine ==" << endl << endl;
 
 	cout << "[* ] - Der L-Baustein" << endl;
 	cout << "[* ]" << endl;
@@ -115,7 +115,6 @@ int WindowsConsole::anleitung()
 	return 0;
 }
 
-
 void WindowsConsole::set_console( short breite , short hoehe )
 {
 	HANDLE hCon = GetStdHandle( STD_OUTPUT_HANDLE );
@@ -133,15 +132,15 @@ void WindowsConsole::set_console( short breite , short hoehe )
 	SetConsoleScreenBufferSize( hCon , b_size );
 }
 
-void WindowsConsole::print_tile(short x, short y)
+void WindowsConsole::print_tile( short x , short y )
 {
-	set_cursor(x, y);
+	set_cursor( x , y );
 	cout << "X";
 }
 
-
-void WindowsConsole::set_cursor(short x, short y)
+void WindowsConsole::set_cursor( short x , short y )
 {
-	COORD C = {x , y};
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),C);
+	COORD C =
+	{ x , y };
+	SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ) , C );
 }
