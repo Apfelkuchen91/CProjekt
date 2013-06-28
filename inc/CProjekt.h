@@ -9,12 +9,13 @@
 #ifndef CPROJEKT_H_
 #define CPROJEKT_H_
 
-#include "Console.h"
+#include "Gameboard.h"
 
 class CProjekt
 {
 	private:
-		Console * console;
+		Gameboard * gameboard;
+		bool beenden;
 
 		void init();
 

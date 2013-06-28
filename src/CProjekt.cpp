@@ -6,24 +6,26 @@
  * @brief	CProjekt.cpp
  */
 
+#include <windows.h>
+
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
 using namespace std;
 
-#include "Tile.h"
-#include "DummyConsole.h"
 #include "CProjekt.h"
+#include "Dimension.h"
 
 CProjekt::CProjekt() :
-			console( new DummyConsole( ) )
+			gameboard( new Gameboard( Dimension(15, 30 )) ),
+			beenden(false)
 {
 	init( );
 }
 
 CProjekt::~CProjekt()
 {
-	delete console;
+	delete gameboard;
 }
 
 void CProjekt::init()
@@ -33,6 +35,11 @@ void CProjekt::init()
 
 void CProjekt::run()
 {
-	// Benutzeroberfl�che anzeigen
-	console->draw( 2 , 4 , 'x' );
+	while(beenden == false)
+	{
+		gameboard->print();
+
+		beenden = true; // Nur ein durchgang.
+	}
+
 }
