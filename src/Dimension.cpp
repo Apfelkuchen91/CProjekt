@@ -7,7 +7,7 @@
 
 #include "Dimension.h"
 
-Dimension::Dimension( unsigned short _height , unsigned short _weight ) :
+Dimension::Dimension( unsigned short _weight,  unsigned short _height ) :
 			height( _height ),
 			width( _weight )
 {

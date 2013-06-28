@@ -11,8 +11,8 @@
 class Position
 {
 	private:
-		const unsigned short x;
-		const unsigned short y;
+		unsigned short x;
+		unsigned short y;
 	public:
 		Position( unsigned short _x , unsigned short _y );
 		virtual ~Position();
@@ -25,6 +25,22 @@ class Position
 		const unsigned short getY() const
 		{
 			return y;
+		}
+
+		void setX( unsigned short x )
+		{
+			this->x = x;
+		}
+
+		void setY( unsigned short y )
+		{
+			this->y = y;
+		}
+
+		void setPosition( unsigned short x, unsigned short y )
+		{
+			this->x = x;
+			this->y = y;
 		}
 };
 

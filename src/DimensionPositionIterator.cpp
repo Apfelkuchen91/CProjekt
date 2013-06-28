@@ -20,10 +20,27 @@ DimensionPositionIterator::~DimensionPositionIterator()
 
 bool DimensionPositionIterator::hasNext()
 {
-	return false;
+	bool retval = ( ( position.getX( ) < dimension.getWidth( ) )
+			&& ( position.getY( ) < dimension.getHeight( ) ) );
+
+	if ( retval )
+		position.setPosition( 0 , 0 );
+
+	return retval;
 }
 
 Position DimensionPositionIterator::getNext()
 {
-	return Position( 0 , 0 );
+	unsigned short x = position.getX( );
+	unsigned short y = position.getY( );
+
+	if ( ++x >= dimension.getWidth( ) )
+	{
+		x = 0;
+		y++;
+	}
+
+	position.setPosition( x , y );
+
+	return position;
 }

@@ -18,7 +18,7 @@ class Dimension
 		const unsigned short height;	//!< H&ouml;he des Spielfeldes
 		const unsigned short width;	//!< Breite des Spielfeldes
 	public:
-		Dimension( unsigned short _height , unsigned short _weight );
+		Dimension(unsigned short _weight,  unsigned short _height );
 		virtual ~Dimension();
 
 		std::shared_ptr < DimensionPositionIterator > getPositionIterator() const;
