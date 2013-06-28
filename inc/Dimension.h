@@ -21,7 +21,7 @@ class Dimension
 		Dimension( unsigned short _height , unsigned short _weight );
 		virtual ~Dimension();
 
-		std::shared_ptr < DimensionPositionIterator > getIterator() const;
+		std::shared_ptr < DimensionPositionIterator > getPositionIterator() const;
 
 		const unsigned short getHeight() const
 		{

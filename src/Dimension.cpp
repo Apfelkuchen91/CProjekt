@@ -19,7 +19,7 @@ Dimension::~Dimension()
 
 }
 
-std::shared_ptr < DimensionPositionIterator > Dimension::getIterator() const
+std::shared_ptr < DimensionPositionIterator > Dimension::getPositionIterator() const
 {
 	return std::shared_ptr < DimensionPositionIterator >(
 			new DimensionPositionIterator( * this ) );

@@ -43,7 +43,7 @@ Block * Gameboard::createGameboard()
 
 void Gameboard::print()
 {
-	for ( auto positionIterator = dimension.getIterator( ) ;
+	for ( auto positionIterator = dimension.getPositionIterator( ) ;
 			positionIterator->hasNext( ) ; )
 	{
 		Position position = positionIterator->getNext( );
