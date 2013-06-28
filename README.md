@@ -1,4 +1,4 @@
 CProjekt
 ========
 
-Ist ein Projekt von DH Studenten, um das C++ Prgammieren zu leren.
+Dieses Projekt wurde von DH-Studenten im Rahmen des C++-Kurses an der Hochschule erstellt.
