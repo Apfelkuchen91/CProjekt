@@ -39,6 +39,7 @@ class Dimension
 		}
 };
 
+// HACK DimensionPositionIterator muss nach der Definition der Klasse "Dimension" eingebunden werden
 #include "DimensionPositionIterator.h"
 
 #endif /* DIMENSION_H_ */
