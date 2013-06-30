@@ -9,24 +9,21 @@
 #ifndef BLOCK_H_
 #define BLOCK_H_
 
-class Block
-{
-	private:
-		char symbol;
-	public:
-		Block();
-		virtual ~Block();
-		virtual void printSymbol();
+class Block {
+private:
+	char symbol;
+public:
+	Block();
+	virtual ~Block();
+	virtual void printSymbol();
 
-		char getSymbol() const
-		{
-			return symbol;
-		}
+	char getSymbol() const {
+		return symbol;
+	}
 
-		void setSymbol( const char _symbol ) const
-		{
-			//symbol = _symbol;
-		}
+	void setSymbol(const char _symbol) const {
+		//symbol = _symbol;
+	}
 };
 
 #endif /* BLOCK_H_ */

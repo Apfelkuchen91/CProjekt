@@ -6,21 +6,17 @@
  */
 
 #include "Dimension.h"
+#include "DimensionPositionIterator.h"
 
-Dimension::Dimension( unsigned short _weight,  unsigned short _height ) :
-			height( _height ),
-			width( _weight )
-{
-
-}
-
-Dimension::~Dimension()
-{
+Dimension::Dimension(unsigned short _weight, unsigned short _height) :
+		height(_height), width(_weight) {
 
 }
 
-std::shared_ptr < DimensionPositionIterator > Dimension::getPositionIterator() const
-{
-	return std::shared_ptr < DimensionPositionIterator >(
-			new DimensionPositionIterator( * this ) );
+Dimension::~Dimension() {
+
+}
+
+DimensionPositionIterator Dimension::getPositionIterator() const {
+	return DimensionPositionIterator(*this);
 }

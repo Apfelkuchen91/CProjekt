@@ -15,30 +15,29 @@
 /*!
  * \brief Grundklasse f&uuml;r das Spielfeld
  */
-class Gameboard
-{
-	private:
-		Dimension dimension;
-		Block * gameboardBlock;	//!< Array f&uuml;r die Bl&ouml;cke auf dem Spielfeld
+class Gameboard {
+private:
+	Dimension dimension;
+	Block * gameboardBlock; //!< Array f&uuml;r die Bl&ouml;cke auf dem Spielfeld
 
-		Block * createGameboard();
+	Block * createGameboard();
 
-	public:
-		/*!
-		 * Konstruktr
-		 * @param _dimension	Dimension des Spielsteines
-		 */
-		Gameboard( Dimension _dimension );
-		/*!
-		 * Destuktor
-		 */
-		virtual ~Gameboard();
+public:
+	/*!
+	 * Konstruktr
+	 * @param _dimension	Dimension des Spielsteines
+	 */
+	Gameboard(Dimension _dimension);
+	/*!
+	 * Destuktor
+	 */
+	virtual ~Gameboard();
 
-		/*!
-		 * Gibt das Spielfeld auf dem Bildschrim aus.
-		 * Start an der aktuellen Couser position.
-		 */
-		virtual void print();
+	/*!
+	 * Gibt das Spielfeld auf dem Bildschrim aus.
+	 * Start an der aktuellen Couser position.
+	 */
+	virtual void print();
 };
 
 #endif /* GAMEBOARD_H_ */

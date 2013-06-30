@@ -10,13 +10,12 @@
 
 #include "Position.h"
 
-class PositionIterator
-{
-	public:
-		PositionIterator();
-		virtual ~PositionIterator();
-		virtual bool hasNext() = 0;
-		virtual Position getNext() = 0;
+class PositionIterator {
+public:
+	PositionIterator();
+	virtual ~PositionIterator();
+	virtual bool hasNext() = 0;
+	virtual Position getNext() = 0;
 };
 
 #endif /* POSITIONITERATOR_H_ */

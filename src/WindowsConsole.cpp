@@ -13,22 +13,19 @@
 using namespace std;
 
 WindowsConsole::WindowsConsole() :
-			Console( )
-{
+		Console() {
 	// TODO Auto-generated constructor stub
 
 }
 
-WindowsConsole::~WindowsConsole()
-{
+WindowsConsole::~WindowsConsole() {
 	// TODO Auto-generated destructor stub
 }
 
-int WindowsConsole::oberflaeche()
-{
+int WindowsConsole::oberflaeche() {
 	int Eingabe = 0;
 
-	set_console( 50 , 35 );
+	set_console(50, 35);
 
 	cout << "--------------------------------------------------" << endl;
 	cout << "---------------------TETRIS-----------------------" << endl;
@@ -38,25 +35,22 @@ int WindowsConsole::oberflaeche()
 	cout << "(3) Beenden" << endl;
 	cin >> Eingabe;
 
-	if ( Eingabe == 1 )
-	{
+	if (Eingabe == 1) {
 		cout << "Spiel" << endl;
-		system( "PAUSE" );
+		system("PAUSE");
 	}
-	if ( Eingabe == 2 )
-	{
+	if (Eingabe == 2) {
 		cout << "Anleitung" << endl;
-		this->anleitung( );
+		this->anleitung();
 	}
-	if ( Eingabe == 3 )
+	if (Eingabe == 3)
 		return 0;
 
 	// TODO: "Spiel" und "Anleitung" implementieren.
 	return 0;
 }
 
-int WindowsConsole::anleitung()
-{
+int WindowsConsole::anleitung() {
 	cout << endl << "== Verf�gbare Spielsteine ==" << endl << endl;
 
 	cout << "[* ] - Der L-Baustein" << endl;
@@ -70,7 +64,7 @@ int WindowsConsole::anleitung()
 	cout << "[**]" << endl;
 
 	cout << endl;
-	system( "PAUSE" );
+	system("PAUSE");
 	cout << endl;
 
 	cout << "[*] - Der S-Baustein" << endl;
@@ -84,7 +78,7 @@ int WindowsConsole::anleitung()
 	cout << "[* ]" << endl;
 
 	cout << endl;
-	system( "PAUSE" );
+	system("PAUSE");
 	cout << endl;
 
 	cout << "[ *] - Der T-Baustein" << endl;
@@ -92,7 +86,7 @@ int WindowsConsole::anleitung()
 	cout << "[ *]" << endl;
 
 	cout << endl;
-	system( "PAUSE" );
+	system("PAUSE");
 	cout << endl;
 
 	cout << "[ *] - Der O-Baustein" << endl;
@@ -100,7 +94,7 @@ int WindowsConsole::anleitung()
 	cout << "[ *]" << endl;
 
 	cout << endl;
-	system( "PAUSE" );
+	system("PAUSE");
 	cout << endl;
 
 	cout << "[*]  - Der I-Baustein" << endl;
@@ -110,37 +104,18 @@ int WindowsConsole::anleitung()
 
 	cout << endl;
 
-	system( "PAUSE" );
+	system("PAUSE");
 
 	return 0;
 }
 
-void WindowsConsole::set_console( short breite , short hoehe )
-{
-	HANDLE hCon = GetStdHandle( STD_OUTPUT_HANDLE );
-	SMALL_RECT size;
-	COORD b_size;
-
-	size.Left = 0;
-	size.Top = 0;
-	size.Right = breite;
-	size.Bottom = hoehe;
-	b_size.X = breite + 1;
-	b_size.Y = hoehe + 1;
-
-	SetConsoleWindowInfo( hCon , true , & size );
-	SetConsoleScreenBufferSize( hCon , b_size );
+void WindowsConsole::set_console(short breite, short hoehe) {
 }
 
-void WindowsConsole::print_tile( short x , short y )
-{
-	set_cursor( x , y );
+void WindowsConsole::print_tile(short x, short y) {
 	cout << "X";
 }
 
-void WindowsConsole::set_cursor( short x , short y )
-{
-	COORD C =
-	{ x , y };
-	SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ) , C );
+void WindowsConsole::set_cursor(short x, short y) {
+
 }

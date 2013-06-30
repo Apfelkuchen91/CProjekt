@@ -7,13 +7,11 @@
 
 #include "PositionIterator.h"
 
-PositionIterator::PositionIterator()
-{
+PositionIterator::PositionIterator() {
 	// TODO Auto-generated constructor stub
 
 }
 
-PositionIterator::~PositionIterator()
-{
+PositionIterator::~PositionIterator() {
 	// TODO Auto-generated destructor stub
 }

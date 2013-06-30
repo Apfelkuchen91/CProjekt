@@ -63,9 +63,8 @@
  * @param argc	Anzahl der Aufrufparameter.
  * @param argv	Pointer auf Aufrufparameter
  */
-int main( int argc , char **argv )
-{
-	CProjekt( ).run( ); // Eingang in das Objektorierntierte
+int main(int argc, char **argv) {
+	CProjekt().run(); // Eingang in das Objektorierntierte
 
 	return 0;
 }

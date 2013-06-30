@@ -10,46 +10,35 @@
 #include <cstdlib>
 #include "Gameboard.h"
 #include "PositionIterator.h"
+#include "DimensionPositionIterator.h"
 
 using namespace std;
 
-Gameboard::Gameboard( Dimension _dimension ) :
-			dimension( _dimension ),
-			gameboardBlock( createGameboard( ) )
-{
+Gameboard::Gameboard(Dimension _dimension) :
+		dimension(_dimension), gameboardBlock(createGameboard()) {
 
 }
 
-Gameboard::~Gameboard()
-{
+Gameboard::~Gameboard() {
 	delete[] gameboardBlock;
 	gameboardBlock = NULL;
 }
 
-Block * Gameboard::createGameboard()
-{
-	Block * retval = new Block[dimension.getSize( )];
+Block * Gameboard::createGameboard() {
+	Block * retval = new Block[dimension.getSize()];
 
-	for ( unsigned short i = 0 ; i < dimension.getHeight( ) ; i++ )
-	{
-		for ( unsigned short j = 0 ; j < dimension.getWidth( ) ; j++ )
-		{
-			retval[i * dimension.getWidth( ) + j].setSymbol( 'x' );
-		}
-	}
+	for (unsigned short i = 0; i < dimension.getHeight(); i++)
+		for (unsigned short j = 0; j < dimension.getWidth(); j++)
+			retval[i * dimension.getWidth() + j].setSymbol('x');
 
 	return retval;
 }
 
-void Gameboard::print()
-{
-	for ( auto positionIterator = dimension.getPositionIterator( ) ;
-			positionIterator->hasNext( ) ; )
-	{
-		Position position = positionIterator->getNext( );
-		gameboardBlock[position.getY( ) * dimension.getWidth( )
-				+ position.getX( )].printSymbol( );
-		if ( position.getX( ) + 1 == dimension.getWidth( ) )
+void Gameboard::print() {
+	for (DimensionPositionIterator positionIterator = dimension.getPositionIterator(); positionIterator.hasNext();) {
+		Position position = positionIterator.getNext();
+		gameboardBlock[position.getY() * dimension.getWidth() + position.getX()].printSymbol();
+		if (position.getX() + 1 == dimension.getWidth())
 			cout << endl;
 	}
 

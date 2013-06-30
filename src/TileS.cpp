@@ -9,13 +9,11 @@
 #include "TileS.h"
 
 TileS::TileS() :
-			Tile( "S" , "Ich bin ...." , 2 , 3 )
-{
+		Tile("S", "Ich bin ....", 2, 3) {
 
 }
 
-TileS::~TileS()
-{
+TileS::~TileS() {
 
 }
 

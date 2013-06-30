@@ -11,18 +11,17 @@
 
 #include "Gameboard.h"
 
-class CProjekt
-{
-	private:
-		Gameboard * gameboard;
-		bool beenden;
+class CProjekt {
+private:
+	Gameboard * gameboard;
+	bool beenden;
 
-		void init();
+	void init();
 
-	public:
-		CProjekt();
-		virtual ~CProjekt();
-		void run();
+public:
+	CProjekt();
+	virtual ~CProjekt();
+	void run();
 };
 
 #endif /* CPROJEKT_H_ */

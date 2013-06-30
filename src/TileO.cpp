@@ -9,13 +9,11 @@
 #include "TileO.h"
 
 TileO::TileO() :
-			Tile( "O" , "Ich bin ...." , 2 , 2 )
-{
+		Tile("O", "Ich bin ....", 2, 2) {
 
 }
 
-TileO::~TileO()
-{
+TileO::~TileO() {
 
 }
 

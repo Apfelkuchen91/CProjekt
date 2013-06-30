@@ -14,17 +14,16 @@
 /**
  * \brief Kindklasse von Tile f&uuml;r den Spielstein O
  */
-class TileO : public Tile
-{
-	public:
-		/*!
-		 * \brief Konstrutor mit Standartwerten.
-		 */
-		TileO();
-		/*!
-		 * \brief Destruktor
-		 */
-		virtual ~TileO();
+class TileO: public Tile {
+public:
+	/*!
+	 * \brief Konstrutor mit Standartwerten.
+	 */
+	TileO();
+	/*!
+	 * \brief Destruktor
+	 */
+	virtual ~TileO();
 };
 
 #endif /* TILEO_H_ */

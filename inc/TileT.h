@@ -14,17 +14,16 @@
 /**
  * \brief Kindklasse von Tile f&uuml;r den Spielstein T
  */
-class TileT : public Tile
-{
-	public:
-		/*!
-		 * \brief Konstrutor mit Standartwerten.
-		 */
-		TileT();
-		/*!
-		 * \brief Destruktor
-		 */
-		virtual ~TileT();
+class TileT: public Tile {
+public:
+	/*!
+	 * \brief Konstrutor mit Standartwerten.
+	 */
+	TileT();
+	/*!
+	 * \brief Destruktor
+	 */
+	virtual ~TileT();
 };
 
 #endif /* TILET_H_ */

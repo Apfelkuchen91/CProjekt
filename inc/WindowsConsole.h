@@ -11,19 +11,18 @@
 
 #include "Console.h"
 
-class WindowsConsole : public Console
-{
-	private:
+class WindowsConsole: public Console {
+private:
 
-	public:
-		WindowsConsole();
-		virtual ~WindowsConsole();
+public:
+	WindowsConsole();
+	virtual ~WindowsConsole();
 
-		int oberflaeche();
-		int anleitung();
-		void set_console( short breite , short hoehe );
-		void print_tile( short x , short y );
-		void set_cursor( short x , short y );
+	int oberflaeche();
+	int anleitung();
+	void set_console(short breite, short hoehe);
+	void print_tile(short x, short y);
+	void set_cursor(short x, short y);
 };
 
 #endif /* WINDOWSCONSOLE_H_ */

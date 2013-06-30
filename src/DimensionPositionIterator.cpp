@@ -7,40 +7,32 @@
 
 #include "DimensionPositionIterator.h"
 
-DimensionPositionIterator::DimensionPositionIterator( Dimension _dimension ) :
-			dimension( _dimension ),
-			position( 0 , 0 )
-{
+DimensionPositionIterator::DimensionPositionIterator(Dimension _dimension) :
+		dimension(_dimension), position(0, 0) {
 }
 
-DimensionPositionIterator::~DimensionPositionIterator()
-{
-	// TODO Auto-generated destructor stub
+DimensionPositionIterator::~DimensionPositionIterator() {
 }
 
-bool DimensionPositionIterator::hasNext()
-{
-	bool retval = ( ( position.getX( ) < dimension.getWidth( ) )
-			&& ( position.getY( ) < dimension.getHeight( ) ) );
+bool DimensionPositionIterator::hasNext() {
+	bool retval = ((position.getX() < dimension.getWidth()) && (position.getY() < dimension.getHeight()));
 
-	if ( retval )
-		position.setPosition( 0 , 0 );
+	if (retval)
+		position.setPosition(0, 0);
 
 	return retval;
 }
 
-Position DimensionPositionIterator::getNext()
-{
-	unsigned short x = position.getX( );
-	unsigned short y = position.getY( );
+Position DimensionPositionIterator::getNext() {
+	unsigned short x = position.getX();
+	unsigned short y = position.getY();
 
-	if ( ++x >= dimension.getWidth( ) )
-	{
+	if (++x >= dimension.getWidth()) {
 		x = 0;
 		y++;
 	}
 
-	position.setPosition( x , y );
+	position.setPosition(x, y);
 
 	return position;
 }

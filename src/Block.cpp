@@ -13,17 +13,14 @@
 using namespace std;
 
 Block::Block() :
-			symbol( '*' )
-{
+		symbol('*') {
 
 }
 
-Block::~Block()
-{
+Block::~Block() {
 }
 
-void Block::printSymbol()
-{
+void Block::printSymbol() {
 	cout << symbol;
 }
 

@@ -8,38 +8,29 @@
 #ifndef DIMENSION_H_
 #define DIMENSION_H_
 
-#include <memory>
-
 class DimensionPositionIterator;
 
-class Dimension
-{
-	private:
-		const unsigned short height;	//!< H&ouml;he des Spielfeldes
-		const unsigned short width;	//!< Breite des Spielfeldes
-	public:
-		Dimension(unsigned short _weight,  unsigned short _height );
-		virtual ~Dimension();
+class Dimension {
+private:
+	const unsigned short height; //!< H&ouml;he des Spielfeldes
+	const unsigned short width; //!< Breite des Spielfeldes
+public:
+	Dimension(unsigned short _weight, unsigned short _height);
+	virtual ~Dimension();
 
-		std::shared_ptr < DimensionPositionIterator > getPositionIterator() const;
+	DimensionPositionIterator getPositionIterator() const;
 
-		const unsigned short getHeight() const
-		{
-			return height;
-		}
+	const unsigned short getHeight() const {
+		return height;
+	}
 
-		const unsigned short getWidth() const
-		{
-			return width;
-		}
+	const unsigned short getWidth() const {
+		return width;
+	}
 
-		const unsigned short getSize() const
-		{
-			return height * width;
-		}
+	const unsigned short getSize() const {
+		return height * width;
+	}
 };
-
-// HACK DimensionPositionIterator muss nach der Definition der Klasse "Dimension" eingebunden werden
-#include "DimensionPositionIterator.h"
 
 #endif /* DIMENSION_H_ */

@@ -9,11 +9,9 @@
 #include "TileI.h"
 
 TileI::TileI() :
-			Tile( "I" , "Ich bin ...." , 4 , 1 )
-{
+		Tile("I", "Ich bin ....", 4, 1) {
 }
 
-TileI::~TileI()
-{
+TileI::~TileI() {
 }
 

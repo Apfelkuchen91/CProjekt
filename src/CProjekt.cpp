@@ -17,26 +17,20 @@ using namespace std;
 #include "Dimension.h"
 
 CProjekt::CProjekt() :
-			gameboard( new Gameboard( Dimension(15, 30 )) ),
-			beenden(false)
-{
-	init( );
+		gameboard(new Gameboard(Dimension(15, 30))), beenden(false) {
+	init();
 }
 
-CProjekt::~CProjekt()
-{
+CProjekt::~CProjekt() {
 	delete gameboard;
 }
 
-void CProjekt::init()
-{
-	srand( time( NULL ) );  //! Initialize random number generator.
+void CProjekt::init() {
+	srand(time(NULL)); //! Initialize random number generator.
 }
 
-void CProjekt::run()
-{
-	while(beenden == false)
-	{
+void CProjekt::run() {
+	while (beenden == false) {
 		gameboard->print();
 
 		beenden = true; // Nur ein durchgang.

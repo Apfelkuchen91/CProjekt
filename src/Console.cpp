@@ -8,14 +8,12 @@
 
 #include "Console.h"
 
-Console::Console()
-{
+Console::Console() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Console::~Console()
-{
+Console::~Console() {
 	// TODO Auto-generated destructor stub
 }
 

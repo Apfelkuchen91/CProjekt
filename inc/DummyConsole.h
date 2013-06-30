@@ -11,15 +11,13 @@
 
 #include "Console.h"
 
-class DummyConsole : public Console
-{
-	public:
-		DummyConsole();
-		virtual ~DummyConsole();
+class DummyConsole: public Console {
+public:
+	DummyConsole();
+	virtual ~DummyConsole();
 
-		virtual void draw(
-			unsigned short _x , unsigned short _y , char _symbol );
-		virtual void clear();
+	virtual void draw(unsigned short _x, unsigned short _y, char _symbol);
+	virtual void clear();
 };
 
 #endif /* DUMMYCONSOLE_H_ */

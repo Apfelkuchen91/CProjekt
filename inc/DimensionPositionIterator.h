@@ -11,16 +11,15 @@
 #include "PositionIterator.h"
 #include "Dimension.h"
 
-class DimensionPositionIterator : public PositionIterator
-{
-	private:
-		const Dimension dimension;
-		Position position;
-	public:
-		DimensionPositionIterator( Dimension _dimension );
-		virtual ~DimensionPositionIterator();
-		bool hasNext();
-		Position getNext();
+class DimensionPositionIterator: public PositionIterator {
+private:
+	const Dimension dimension;
+	Position position;
+public:
+	DimensionPositionIterator(Dimension _dimension);
+	virtual ~DimensionPositionIterator();
+	bool hasNext();
+	Position getNext();
 
 };
 

@@ -17,33 +17,28 @@
 using namespace std;
 
 DummyConsole::DummyConsole() :
-			Console( )
-{
+		Console() {
 }
 
-DummyConsole::~DummyConsole()
-{
+DummyConsole::~DummyConsole() {
 }
 
-void DummyConsole::draw(
-	unsigned short _x , unsigned short int _y , char _symbol )
-{
+void DummyConsole::draw(unsigned short _x, unsigned short int _y, char _symbol) {
 	/*TileTest *pTile = new TileTest( );
 
 	 pTile->printTile( );
 
 	 delete ( pTile );*/
 
-	Gameboard * pGameboard = new Gameboard( Dimension( 15 , 15 ) );
+	Gameboard * pGameboard = new Gameboard(Dimension(15, 15));
 
-	pGameboard->print( );
+	pGameboard->print();
 
 	delete pGameboard;
 
 	//system( "PAUSE" );
 }
 
-void DummyConsole::clear()
-{
+void DummyConsole::clear() {
 
 }
