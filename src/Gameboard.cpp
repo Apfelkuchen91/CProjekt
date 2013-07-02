@@ -41,14 +41,4 @@ void Gameboard::print() {
 		if (position.getX() + 1 == dimension.getWidth())
 			cout << endl;
 	}
-
-//	for(unsigned short i = 0; i < dimension.getHeight(); i++)
-//		{
-//			for(unsigned short j = 0; j < dimension.getWidth(); j++)
-//			{
-//				gameboardBlock[i * dimension.getWidth() + j].printSymbol();
-//			}
-//
-//			cout << endl;
-//		}
 }

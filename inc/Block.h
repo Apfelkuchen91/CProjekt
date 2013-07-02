@@ -17,13 +17,15 @@ public:
 	virtual ~Block();
 	virtual void printSymbol();
 
-	char getSymbol() const {
-		return symbol;
-	}
+		char getSymbol() const
+		{
+			return symbol;
+		}
 
-	void setSymbol(const char _symbol) const {
-		//symbol = _symbol;
-	}
+		void setSymbol( char symbol )
+		{
+			this->symbol = symbol;
+		}
 };
 
 #endif /* BLOCK_H_ */
